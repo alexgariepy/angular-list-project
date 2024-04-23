@@ -1,1 +1,8 @@
-<h1 style="color: rgba(255,255,255,0.85);">Sample Page One</h1>
+<h1 style="color: rgba(255,255,255,0.85);">Tic tac toe</h1>
+
+<div class="board">
+    <div class="square" *ngFor="let cell of cells; let i=index" (click)="makeMove(i)">
+        {{cell}}
+    </div>
+</div>
+<button (click)="reset()">Reset</button>
