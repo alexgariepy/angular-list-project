@@ -1,1 +1,27 @@
-<h1 style="color: rgba(255,255,255,0.85);">Sample Page Two</h1>
+<h1 style="color: rgba(255,255,255,0.85);">{{ board.Name }}</h1>
+
+<div class="root">
+  <div class="board">
+    <div class="board-wrapper">
+      <div class="board-columns" cdkDropListGroup>
+        <div class="board-column" *ngFor="let column of board.Columns">
+
+          <div class="column-title">
+            {{ column.Name }}
+          </div>
+
+          <div class="tasks-container" cdkDropList [cdkDropListData]="column.Tasks" (cdkDropListDropped)="drop($event)">
+            <div class="task" *ngFor="let item of column.Tasks" cdkDrag>
+              {{ item }}
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
