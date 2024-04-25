@@ -6,6 +6,8 @@
 
 .page-content-container{
     padding: 50px;
+    display: flex;
+    height: 100%;
 }
 
 .sidebar {
